@@ -1,0 +1,55 @@
+*
+{
+	padding: 0;
+	margin: 0;
+}
+
+body
+{
+	background-image: url();
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.menu
+{
+	background: rgb(104, 116, 222);
+	text-align: center;
+}
+
+.menu ul
+{
+	display: inline-flex;
+	list-style: none;
+	color: #fff;
+}
+
+.menu ul li
+{
+	width: 120px;
+	margin: 15px;
+	padding: 10px;
+}
+
+.menu ul li a
+{
+	text-decoration: none;
+	color: #fff;
+}
+
+.active, .menu ul li:hover
+{
+	background: rgb(65, 215, 232);
+	border-radius: 3px;
+}
+
+.logo{
+	width: 100px;
+	height: 40.94px;
+	cursor: pointer;
+	position: relative;
+	left: -100px;
+	top: 15px;
+}
