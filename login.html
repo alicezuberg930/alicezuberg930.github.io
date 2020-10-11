@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tiến's Website</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style2.css">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <script type="text/javascript" src="javascript.js"></script>
+</head>
+<body>
+    <div class="a">
+        <a href="index0.html"><img src="image/logo.png"></a>
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-button" onclick="login()"><h5>Đăng Nhập</h5></button>
+                <button type="button" class="toggle-button" onclick="register()"><h5>Đăng Kí</h5></button>
+            </div>
+            <form id="login" class="input-group">
+                <input type="text" class="user-id" placeholder="Nhập email hoặc số điện thoại">
+                <input type="password" class="user-id" placeholder="Nhập mật khẩu">
+                <input type="checkbox" class="check-box">
+                <span>Nhớ mật khẩu</span><br>
+                <p><a href="index3.html">Quên mật khẩu?</a></p>
+                <button class="submit">Đăng Nhập</button>
+            </form>
+            <form id="register" class="input-group">
+                <input type="text" class="user-id" placeholder="Nhập họ tên">
+                <input type="text" class="user-id" placeholder="Nhập email hoặc số điện thoại">
+                <input type="password" class="user-id" placeholder="Nhập mật khẩu">
+                <input type="checkbox" class="check-box">
+                <span>Tôi đồng ý với điều khoản và dịch vụ</span>
+                <button class="submit">Đăng Kí</button>
+            </form>
+        </div>
+        <div class="intro">
+            <h1>Chào mừng đến với cửa hàng của</h1><br>
+            <span>Tiến-Toàn-Trí</span>
+        </div>
+        <script type="text/javascript">
+            var x = document.getElementById("login");
+            var y = document.getElementById("register");
+            var z = document.getElementById("btn");
+            function register()
+            {
+                x.style.left = "-400px";
+                y.style.right = "100px";
+                z.style.left = "120px";
+            }
+            function login()
+            {
+                x.style.left = "100px";
+                y.style.right = "-450px";
+                z.style.left = "0";
+            }
+        </script>
+    </div>
+</body>
+</html>
