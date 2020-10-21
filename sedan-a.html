@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sedan Hạng A</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, inital-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+</head>
+<body>
+    <style type="text/css">
+        @keyframes search-body{
+            0% {background-color: crimson;}
+            25% {background-color: lightsalmon;}
+            50% {background-color: pink;}
+            100% {background-color: indigo;}}
+        @keyframes sale{
+            0% {color: rgb(252, 19, 3);} 
+            50% {color: rgb(227, 204, 32);} 
+            100%{color: rgb(230, 55, 212);}}
+        a{
+            color: black;
+            text-decoration: none;}
+        *{ 
+            margin: 0;
+            padding: 0;}
+        body::-webkit-scrollbar{
+            width: 10px;}
+        body::-webkit-scrollbar-track{
+            background: #1e1e24;}
+        body::-webkit-scrollbar-thumb{
+            background: #6649b8;
+            border-radius: 5px;
+        }
+        body{
+            background-color: rgb(237, 237, 237);}
+        .utility{
+            width: 100%;
+            height: 20px;
+            display: flex;
+            justify-content: space-around;}
+        .fa-sign-in-alt{
+            float: right;
+            margin-left: 10px;
+            margin-top: 2px;}
+        .search-body{
+            display: flex;
+            position: sticky;
+            top: 0px;
+            width: 100%;
+            height: 80px;
+            background-color: rgb(230, 109, 39);
+            animation: search-body 0.1s linear infinite;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 1;}
+        a img{        
+            width: 100px;}
+        .search-box{
+            width: 700px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: white;
+            display: flex;}
+        .search-bar{
+            border: none;
+            outline: none;
+            width: 655px;
+            height: 35px;
+            border-radius: 10px;
+            padding-left: 10px;
+            font-size: 15px;
+            align-self: center;}
+        .fa-search{
+            border-radius: 0 10px 10px 0;
+            background-color: orange;
+            display: flex;
+            color: black;
+            width: 40px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        .fa-shopping-cart{
+            font-size: 35px;
+            color: white;
+        }
+        .shop-start{
+            margin-top: 15px;
+            position: relative;
+            width: 68%;
+            height: 228px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: red;
+        }
+        .image{
+            display: block;
+            float: right;
+            width: 89%;
+            height: 228px;}
+        .image img{
+            object-fit: fill;
+            width: 100%;
+            height: 100%;}
+        .fa-angle-left{
+            float: right;
+            margin: 1px;
+            transition: 1s;}
+        ul li:hover .fa-angle-left{ 
+            transform: rotate(180deg);}
+        .menu{
+            display: block;
+            float: left;
+            width: 11%;
+            height: 228px;
+            background-color: white;}
+        .menu ul{
+            list-style: none;}
+        .menu ul li{
+            padding: 5px;
+            text-align: left;}
+        .menu ul li:hover{
+            background: rgb(237, 224, 218);
+            border-left: 3px solid orange;}
+        .submenu{
+            display: none;}
+        .menu ul li:hover .submenu{
+            height: 100%;
+            box-shadow: 0 0 1px 2px rgb(211, 214, 219);
+            display: block;
+            position: absolute;
+            left: 110px;
+            top: 0;
+            background-color: white;}
+        .menu ul li:hover .submenu ul li{
+            width: 100px;}
+        .submenu ul a:hover li{
+            color: rgb(219, 118, 88);}
+        .grid-container{
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(4,250px);
+            grid-template-rows: repeat(4,270px);
+            grid-gap: 10px;
+            justify-content: center;}
+        .grid-container h1{
+            font-size: 20px;
+            font-weight: 100;}
+        .grid-item{
+            color: black;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid black;
+            text-align: start;
+            padding: 5px;
+            transition: 1s;}
+       .grid-item:hover{
+           box-shadow: 1px 2px 4px 8px rgb(211, 214, 219, 0.8);
+           border-radius: 2px;
+           transform: scale(1.1);
+           border: 1px solid orange;}
+        .grid-item img{
+            object-fit: fill;
+            width: 100%;
+            height: 135px;}  
+    </style>
+	<div>
+        <div class="utility">
+            <a href="#">Tải Ứng Dụng</a>
+            <a href="#">Chăm Sóc Khách Hàng</a>
+            <a href="#">Thông Báo</a>
+            <a href="#">Kết Nối</a>
+            <a href="login.html">Đăng Nhập<i class="fas fa-sign-in-alt"></i></a>
+        </div>
+		<div class="search-body">
+            <a href="index0.html"><img src="image/logo.png"></a>
+     		<div class="search-box">
+     			<input id="search" type="text" placeholder="Tìm Kiếm" class="search-bar">
+     			<a href="#"><i class="fas fa-search"></i></a>
+     		</div>
+            <i class="fas fa-shopping-cart"></i>
+     	</div>
+        <div class="shop-start">
+            <div class="image">
+                <img src="image/toan.jpg">
+            </div>
+         	<div class="menu">
+	        	<ul>
+            	    <li>Hatchback<i class="fas fa-angle-left"></i>
+                       <div class="submenu">
+                            <ul>
+                                <a href="hatch-back-a.html"><li>Phân Khúc A</li></a>
+                                <a href="hatch-back-b.html"><li>Phân Khúc B</li></a>
+                                <a href="hatch-back-c.html"><li>Phân Khúc C</li></a>
+                                <a href="hatch-back-d.html"><li>Phân Khúc D</li></a>
+                            </ul>
+                        </div>
+                    </li>
+        	        <li>SUV<i class="fas fa-angle-left"></i>
+                        <div class="submenu">
+                            <ul>
+                                <a href="suv-b.html"><li>Phân khúc B</li></a>
+                                <a href="suv-c.html"><li>Phân khúc C</li></a>
+                                <a href="suv-pt.html"><li>Phổ thông</li></a>
+                                <a href="suv-hs.html"><li>Hạng sang</li></a>
+                            </ul>
+                        </div>
+                    </li>
+        	        <li>Crossover<i class="fas fa-angle-left"></i>
+                        <div class="submenu">
+                            <ul>
+                                <a href="crossover-b.html"><li>Phân khúc B</li></a>
+                                <a href="crossover-c.html"><li>Phân khúc C</li></a>
+                                <a href="crossover-d.html"><li>Phân Khúc D</li></a>
+                                <a href="crossover-n.html"><li>Cỡ Nhỏ</li></a>
+                                <a href="crossover-pt.html"><li>Phổ Thông</li></a>
+                                <a href="crossover-hs.html"><li>Hạng Sang</li></a>
+                            </ul>
+                        </div>
+                    </li>
+                  	<li>Sedan<i class="fas fa-angle-left"></i>
+                        <div class="submenu">
+                            <ul>
+                                <a href="sedan-a.html"><li>Phân Khúc A</li></a>
+                                <a href="sedan-b.html"><li>Phân Khúc B</li></a>
+                                <a href="sedan-c.html"><li>Phân Khúc C</li></a>
+                                <a href="sedan-d.html"><li>Phân Khúc D</li></a>
+                                <a href="sedan-hs.html"><li>Hạng Sang</li></a>
+                                <a href="sedan-l.html"><li>Cỡ Lớn</li></a>
+                            </ul>
+                        </div>
+                    </li>
+              	    <li>Coupe<i class="fas fa-angle-left"></i>
+                        <div class="submenu">
+                            <ul>
+                                <a href="coupe-hs.html"><li>Hạng Sang</li></a>
+                                <a href="coupe-hsl.html"><li>Hạng Sang Cỡ Lớn</li></a>
+                                <a href="coupe-tt.html"><li>Thể Thao</li></a>
+                                <a href="coupe-sx.html"><li>Siêu Xe</li></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>Convertible<i class="fas fa-angle-left"></i>
+                        <div class="submenu">
+                            <ul>
+                                <a href="convertible-c.html"><li>Phân Khúc C</li></a>
+                                <a href="convertible-hs.html"><li>Hạng Sang</li></a>
+                                <a href="convertible-hsl.html"><li>Hạng Sang Cỡ Lớn</li></a>
+                                <a href="convertible-tt.html"><li>Thể Thao</li></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>Van<i class="fas fa-angle-left"></i>
+                        <div class="submenu">
+                            <ul>
+                                <a href="van-gd.html"><li>Gia Đình</li></a>
+                                <a href="van-tm.html"><li>Thương Mại</li></a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>Bán Tải<i class="fas fa-angle-left"></i>
+                        <div class="submenu">
+                            <ul>
+                                <a href="mini-van-l.html"><li>Cỡ Lớn</li></a>
+                                <a href="mini-van-n.html"><li>Cỡ Nhỏ</li></a>
+                                <a href="mini-van-pt.html"><li>Phổ Thông</li></a>
+                            </ul>
+                        </div>
+                    </li>
+             	</ul>
+            </div>
+        </div>
+        <div id="grid" class="grid-container">
+            <a class="grid-item" href="toyota-vios.html">
+                <img src="image/hatch-back-1a.png">
+                <h1>Toyota Vios</h1>
+                <h1>470.000.000 - 570.000.000 đ</h1>
+            </a>
+            <a class="grid-item" href="hyundai-accent.html">
+                <img src="image/hatch-back-2a.png">
+                <h1>Hyundai Accent</h1>
+                <h1>420.000.000 - 542.000.000 đ</h1>
+            </a>
+            <a class="grid-item" href="kio-soluto.html">
+                <img src="image/hatch-back-3a.png">
+                <h1>Kia Soluto</h1>
+                <h1>399.000.000 - 499.000.000 đ</h1>
+            </a>
+            <a class="grid-item" href="mistubishi-attrage.html">
+                <img src="image/hatch-back-4a.png">
+                <h1>Mitsubishi Attrage</h1>
+                <h1>375.000.000 - 460.000.000 đ</h1>
+            </a>
+            <a class="grid-item" href="mazda-2.html">
+                <img src="image/hatch-back-5a.png">
+                <h1>Mazda 2</h1>
+                <h1>509.000.000 - 649.000.000 đ</h1>
+            </a>
+            <a class="grid-item" href="honda-city.html">
+                <img src="image/hatch-back-6a.png">
+                <h1>Honda City</h1>
+                <h1>559.000.000 - 599.000.000 đ</h1>
+            </a>
+            <a class="grid-item" href="suzuki-ciaz.html">
+                <img src="image/hatch-back-6a.png">
+                <h1>Suzuki Ciaz</h1>
+                <h1>488.000.000 đ</h1>
+            </a>
+            <a class="grid-item" href="chevrolet-aveo.html">
+                <img src="image/hatch-back-6a.png">
+                <h1>Chevrolet Aveo</h1>
+                <h1>455.000.000 - 490.000.000 đ</h1>
+            </a>
+            <a class="grid-item" href="renault-logan.html">
+                <img src="image/hatch-back-6a.png">
+                <h1>Renault Logan</h1>
+                <h1>599.000.000 đ</h1>
+            </a>
+            <a class="grid-item" href="nissan-sunny.html">
+                <img src="image/hatch-back-6a.png">
+                <h1>Nissan Sunny</h1>
+                <h1>448.000.000 - 518.000.000 đ</h1>
+            </a>
+            <a class="grid-item" href="volkswagen-polo.html">
+                <img src="image/hatch-back-6a.png">
+                <h1>Volkswagen Polo</h1>
+                <h1>699.000.000 đ</h1>
+            </a>
+            <a class="grid-item" href="kia-rio.html">
+                <img src="image/hatch-back-6a.png">
+                <h1>Kia Rio</h1>
+                <h1>470.000.000 - 510.000.000 đ</h1>
+            </a>
+            <a class="grid-item" href="nissan-versa.html">
+                <img src="image/hatch-back-6a.png">
+                <h1>Nissan Versa</h1>
+                <h1>304.000.000 đ</h1>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
