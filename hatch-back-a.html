@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hatchback Hạng A</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+</head>
+<body>
+    <style type="text/css">
+        @import "css/1.css";
+        .grid-container{
+            grid-template-columns: repeat(4,250px);
+            grid-template-rows: repeat(2,270px);
+    </style>
+    <div class="utility">
+        <a href="#">Tải Ứng Dụng</a>
+        <a href="#">Chăm Sóc Khách Hàng</a>
+        <a href="#">Thông Báo</a>
+        <a href="#">Kết Nối</a>
+        <a href="login.html">Đăng Nhập<i class="fas fa-sign-in-alt"></i></a>
+    </div>
+    <div class="search-body">
+        <a href="home.html"><img src="image/logo.png" class="logo"></a>
+        <div class="search-box">
+            <input type="text" placeholder="Tìm Kiếm" class="search-bar">
+            <a href="#"><i class="fas fa-search"></i><a>
+        </div>
+        <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+            <span class="cart-info-icon"><i class="fas fa-shopping-cart"></i></span>
+            <p class="mb-0 text-capitalize"><span id="item-count">0 </span> items - $<span class="item-total">0</span></p>
+        </div>
+    </div>
+    <div id="cart" class="cart">
+        <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+            <img src="" id="item-img">
+            <div class="item-text">
+                <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+                <span>$</span>
+                <span id="cart-item-price" class="cart-item-price" class="mb-0">10.99</span>
+            </div>
+            <a href="#" id='cart-item-remove' class="cart-item-remove">
+                <i class="fas fa-trash"></i>
+            </a>
+        </div>
+        <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
+            <h5>total</h5>
+            <h5> $ <strong id="cart-total">10.00</strong> </h5>
+        </div>
+        <div class="cart-buttons-container mt-3 d-flex justify-content-between">
+            <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear cart</a>
+            <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink">checkout</a>
+        </div>
+    </div>
+    <header class="shop-banner">
+        <section class="image-container">
+            <button id="next"><i class="fas fa-arrow-right"></i></button>
+            <button id="previous"><i class="fas fa-arrow-left"></i></button>
+            <div class="imageBox">
+                <img src="toan/1.jpg" class="active">
+                <img src="toan/2.jpg">
+                <img src="toan/3.jpg">
+                <img src="toan/4.jpg">
+                <img src="toan/5.jpg">
+                <img src="toan/6.jpg">
+                <img src="toan/7.jpg">
+                <img src="toan/8.jpg">
+                <img src="toan/9.jpg">
+                <img src="toan/10.jpg">
+                <img src="toan/11.jpg">
+                <img src="toan/12.jpg">
+                <img src="toan/13.jpg">
+                <img src="toan/14.jpg">
+                <img src="toan/15.jpg">
+                <img src="toan/16.jpg">
+                <img src="toan/17.jpg">
+                <img src="toan/18.jpg">
+                <img src="toan/19.jpg">
+                <img src="toan/20.jpg">
+                <img src="toan/21.jpg">
+            </div>
+        </section>
+        <div class="menu">
+            <ul>
+                <li>Hatchback<i class="fas fa-angle-left"></i>
+                    <div class="submenu">
+                        <ul>
+                            <a href="hatch-back-a.html"><li>Phân Khúc A</li></a>
+                            <a href="hatch-back-b.html"><li>Phân Khúc B</li></a>
+                            <a href="hatch-back-c.html"><li>Phân Khúc C</li></a>
+                            <a href="hatch-back-d.html"><li>Phân Khúc D</li></a>
+                        </ul>
+                    </div>
+                </li>
+                <li>SUV<i class="fas fa-angle-left"></i>
+                    <div class="submenu">
+                        <ul>
+                            <a href="suv-b.html"><li>Phân khúc B</li></a>
+                            <a href="suv-c.html"><li>Phân khúc C</li></a>
+                            <a href="suv-pt.html"><li>Phổ thông</li></a>
+                            <a href="suv-hs.html"><li>Hạng sang</li></a>
+                        </ul>
+                    </div>
+                </li>
+                <li>Crossover<i class="fas fa-angle-left"></i>
+                    <div class="submenu">
+                        <ul>
+                            <a href="crossover-b.html"><li>Phân khúc B</li></a>
+                            <a href="crossover-c.html"><li>Phân khúc C</li></a>
+                            <a href="crossover-d.html"><li>Phân Khúc D</li></a>
+                            <a href="crossover-n.html"><li>Cỡ Nhỏ</li></a>
+                            <a href="crossover-pt.html"><li>Phổ Thông</li></a>
+                            <a href="crossover-hs.html"><li>Hạng Sang</li></a>
+                        </ul>
+                    </div>
+                </li>
+                <li>Sedan<i class="fas fa-angle-left"></i>
+                    <div class="submenu">
+                        <ul>
+                            <a href="sedan-a.html"><li>Phân Khúc A</li></a>
+                            <a href="sedan-b.html"><li>Phân Khúc B</li></a>
+                            <a href="sedan-c.html"><li>Phân Khúc C</li></a>
+                            <a href="sedan-d.html"><li>Phân Khúc D</li></a>
+                            <a href="sedan-hs.html"><li>Hạng Sang</li></a>
+                            <a href="sedan-l.html"><li>Cỡ Lớn</li></a>
+                        </ul>
+                    </div>
+                </li>
+                <li>Coupe<i class="fas fa-angle-left"></i>
+                    <div class="submenu">
+                        <ul>
+                            <a href="coupe-hs.html"><li>Hạng Sang</li></a>
+                            <a href="coupe-hsl.html"><li>Hạng Sang Cỡ Lớn</li></a>
+                            <a href="coupe-tt.html"><li>Thể Thao</li></a>
+                            <a href="coupe-sx.html"><li>Siêu Xe</li></a>
+                        </ul>
+                    </div>
+                </li>
+                <li>Convertible<i class="fas fa-angle-left"></i>
+                    <div class="submenu">
+                        <ul>
+                            <a href="convertible-c.html"><li>Phân Khúc C</li></a>
+                            <a href="convertible-hs.html"><li>Hạng Sang</li></a>
+                            <a href="convertible-hsl.html"><li>Hạng Sang Cỡ Lớn</li></a>
+                            <a href="convertible-tt.html"><li>Thể Thao</li></a>
+                        </ul>
+                    </div>
+                </li>
+                <li>Van<i class="fas fa-angle-left"></i>
+                    <div class="submenu">
+                        <ul>
+                            <a href="van-gd.html"><li>Gia Đình</li></a>
+                            <a href="van-tm.html"><li>Thương Mại</li></a>
+                        </ul>
+                    </div>
+                </li>
+                <li>Bán Tải<i class="fas fa-angle-left"></i>
+                    <div class="submenu">
+                        <ul>
+                            <a href="mini-van-l.html"><li>Cỡ Lớn</li></a>
+                            <a href="mini-van-n.html"><li>Cỡ Nhỏ</li></a>
+                            <a href="mini-van-pt.html"><li>Phổ Thông</li></a>
+                        </ul>
+                    </div>
+                </li>
+             </ul>
+        </div>
+    </header>>
+    <div id="in" class="grid-container">
+        <a class="grid-item" href="">
+            <div class="upper-half">
+                <img src="image/hatch-back-1a.png">
+            </div>
+            <div class="lower-half">
+                <h1>Vinfast Fadil</h1>
+                <h1>415.000.000 - 479.000.000 đ</h1>
+            </div>
+        </a>
+        <a class="grid-item" href="">
+            <div class="upper-half">
+                <img src="image/hatch-back-2a.png">
+            </div>
+            <div class="lower-half">
+                <h1>Toyota Wigo</h1>
+                <h1>352.000.000 - 384.000.000 đ</h1>
+            </div>
+        </a>
+        <a class="grid-item" href="">
+            <div class="upper-half">
+                <img src="image/hatch-back-3a.png">
+            </div>
+            <div class="lower-half">
+                <h1>Kia Morning</h1>
+                <h1>299.000.000 - 393.000.000 đ</h1>
+            </div>
+        </a>
+        <a class="grid-item" href="">
+            <div class="upper-half">
+                <img src="image/hatch-back-4a.png">
+            </div>
+            <div class="lower-half">
+                <h1>Hyundai Grand i10</h1>
+                <h1>350.000.000 - 415.000.000 đ</h1>
+            </div>
+        </a>
+        <a class="grid-item" href="">
+            <div class="upper-half">
+                <img src="image/hatch-back-5a.png">
+            </div>
+            <div class="lower-half">
+                <h1>Honda Brio</h1>
+                <h1>418.000.000 - 488.000.000 đ</h1>
+            </div>
+        </a>
+        <a class="grid-item" href="">
+            <div class="upper-half">
+                <img src="image/hatch-back-6a.png">
+            </div>
+            <div class="lower-half">
+                <h1>Chevrolet Spark</h1>
+                <h1>295.000.000 - 385.000.000 đ</h1>
+            </div>
+        </a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
