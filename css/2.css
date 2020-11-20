@@ -70,18 +70,21 @@ img {
   outline: none;
   background: transparent;
 }
+.term{
+  width: 50%;
+  margin: 5px auto;
+  justify-content: space-between;
+  display: flex;
+}
 .submit {
   width: 85%;
   padding: 10px 30px;
-  margin: 20px 12px;
+  margin: 20px auto;
   cursor: pointer;
   background: linear-gradient(45deg, #ff105f, #ffad06);
   border-radius: 30px;
   outline: none;
   border: none;
-}
-.check-box {
-  margin: 15px 0;
 }
 .input-group input[type="text"],
 [type="password"] {
@@ -90,7 +93,6 @@ img {
 }
 .input-group span {
   font-size: 12px;
-  color: #777;
 }
 .input-group p {
   margin: 10px;

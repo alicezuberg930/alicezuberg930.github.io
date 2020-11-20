@@ -59,3 +59,11 @@
 .products ul li:nth-child(4){
   width: 15%;
 }
+.total-container{
+  border-top: 1px solid black;
+  margin: 20PX auto;
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+  
+}

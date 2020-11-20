@@ -17,7 +17,11 @@ function display(){
         </div>
         `;
       });
-
+      productContainer.innerHTML += `
+      <div class="total-container">
+        <h1>Total Cost</h1>
+        <h1>${cartcost} VND</h1>  
+      `;
     }
   }
   display();

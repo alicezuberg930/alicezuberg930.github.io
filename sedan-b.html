@@ -5,187 +5,539 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <link rel="stylesheet" type="text/css" href="1.css">
 </head>
 <body>
-    <style type="text/css">
-        .grid-container{
-            grid-template-columns: repeat(4,250px);
-            grid-template-rows: repeat(4,270px);}
+<style type="text/css">
+        @import "css/1.css";
+        @import "css/4.css";
+
+        .grid-container {
+            grid-template-columns: repeat(3, 260px);
+            grid-template-rows: repeat(2, 270px);
+        }
+
+        .product-body {
+            height: 151vh;
+        }
+
+        @media (max-width: 1080px) {
+            .grid-container {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(3, 270px);
+            }
+        }
     </style>
-	<div>
-        <div class="utility">
-            <a href="#">Tải Ứng Dụng</a>
-            <a href="#">Chăm Sóc Khách Hàng</a>
-            <a href="#">Thông Báo</a>
-            <a href="#">Kết Nối</a>
-            <a href="login.html">Đăng Nhập<i class="fas fa-sign-in-alt"></i></a>
-        </div>
-		<div class="search-body">
-            <a href="index0.html"><img src="image/logo.png"></a>
-     		<div class="search-box">
-     			<input id="search" type="text" placeholder="Tìm Kiếm" class="search-bar">
-     			<a href="#"><i class="fas fa-search"></i></a>
-     		</div>
-            <i class="fas fa-shopping-cart"></i>
-     	</div>
-        <div class="shop-start">
-            <div class="image">
-                <img src="image/toan.jpg">
+    <div class="utility">
+        <a href="#"><span>Tải Ứng Dụng</span></a>
+        <a href="#"><span>Thông Báo</span></a>
+        <a href="#"><span>Kết Nối</span></a>
+        <a href="login.html" class="login">
+            <span>Đăng Nhập</span>
+            <span><i class="fas fa-user"></i></span>
+        </a>
+    </div>
+    <div class="search-body">
+        <a href="home.html"><img src="image/logo.png"></a>
+        <form class="search-box">
+            <input id="search" type="text" placeholder="Tìm Kiếm" class="search-bar">
+            <i class="fas fa-search"></i>
+        </form>
+        <a href="cart.html" id="cart-info" class="cart-info">
+            <span class="cart-info-icon"><i class="fas fa-shopping-cart"></i></span>
+            <div class="productNumber"><small>0</small></div>
+        </a>
+    </div>
+    <div class="shop-banner">
+        <section class="image-container">
+            <div class="button-slider">
+                <button id="previous"><i class="fas fa-arrow-left"></i></button>
+                <button id="next"><i class="fas fa-arrow-right"></i></button>
             </div>
-         	<div class="menu">
-	        	<ul>
-            	    <li>Hatchback<i class="fas fa-angle-left"></i>
-                       <div class="submenu">
-                            <ul>
-                                <a href="hatch-back-a.html"><li>Phân Khúc A</li></a>
-                                <a href="hatch-back-b.html"><li>Phân Khúc B</li></a>
-                                <a href="hatch-back-c.html"><li>Phân Khúc C</li></a>
-                                <a href="hatch-back-d.html"><li>Phân Khúc D</li></a>
-                            </ul>
-                        </div>
-                    </li>
-        	        <li>SUV<i class="fas fa-angle-left"></i>
-                        <div class="submenu">
-                            <ul>
-                                <a href="suv-b.html"><li>Phân khúc B</li></a>
-                                <a href="suv-c.html"><li>Phân khúc C</li></a>
-                                <a href="suv-pt.html"><li>Phổ thông</li></a>
-                                <a href="suv-hs.html"><li>Hạng sang</li></a>
-                            </ul>
-                        </div>
-                    </li>
-        	        <li>Crossover<i class="fas fa-angle-left"></i>
-                        <div class="submenu">
-                            <ul>
-                                <a href="crossover-b.html"><li>Phân khúc B</li></a>
-                                <a href="crossover-c.html"><li>Phân khúc C</li></a>
-                                <a href="crossover-d.html"><li>Phân Khúc D</li></a>
-                                <a href="crossover-n.html"><li>Cỡ Nhỏ</li></a>
-                                <a href="crossover-pt.html"><li>Phổ Thông</li></a>
-                                <a href="crossover-hs.html"><li>Hạng Sang</li></a>
-                            </ul>
-                        </div>
-                    </li>
-                  	<li>Sedan<i class="fas fa-angle-left"></i>
-                        <div class="submenu">
-                            <ul>
-                                <a href="sedan-a.html"><li>Phân Khúc A</li></a>
-                                <a href="sedan-b.html"><li>Phân Khúc B</li></a>
-                                <a href="sedan-c.html"><li>Phân Khúc C</li></a>
-                                <a href="sedan-d.html"><li>Phân Khúc D</li></a>
-                                <a href="sedan-hs.html"><li>Hạng Sang</li></a>
-                                <a href="sedan-l.html"><li>Cỡ Lớn</li></a>
-                            </ul>
-                        </div>
-                    </li>
-              	    <li>Coupe<i class="fas fa-angle-left"></i>
-                        <div class="submenu">
-                            <ul>
-                                <a href="coupe-hs.html"><li>Hạng Sang</li></a>
-                                <a href="coupe-hsl.html"><li>Hạng Sang Cỡ Lớn</li></a>
-                                <a href="coupe-tt.html"><li>Thể Thao</li></a>
-                                <a href="coupe-sx.html"><li>Siêu Xe</li></a>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>Convertible<i class="fas fa-angle-left"></i>
-                        <div class="submenu">
-                            <ul>
-                                <a href="convertible-c.html"><li>Phân Khúc C</li></a>
-                                <a href="convertible-hs.html"><li>Hạng Sang</li></a>
-                                <a href="convertible-hsl.html"><li>Hạng Sang Cỡ Lớn</li></a>
-                                <a href="convertible-tt.html"><li>Thể Thao</li></a>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>Van<i class="fas fa-angle-left"></i>
-                        <div class="submenu">
-                            <ul>
-                                <a href="van-gd.html"><li>Gia Đình</li></a>
-                                <a href="van-tm.html"><li>Thương Mại</li></a>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>Bán Tải<i class="fas fa-angle-left"></i>
-                        <div class="submenu">
-                            <ul>
-                                <a href="mini-van-l.html"><li>Cỡ Lớn</li></a>
-                                <a href="mini-van-n.html"><li>Cỡ Nhỏ</li></a>
-                                <a href="mini-van-pt.html"><li>Phổ Thông</li></a>
-                            </ul>
-                        </div>
-                    </li>
-             	</ul>
+            <div class="imageBox">
+                <img src="image/suv-18pt.png" alt="" class="active">
+                <img src="image/hatch-back-2b.png" alt="">
+                <img src="image/hatch-back-2c.png" alt="">
+                <img src="image/hatch-back-6c.png" alt="">
+                <img src="image/sedan-11d.png" alt="">
+                <img src="image/sedan-3d.png" alt="">
+                <img src="image/suv-10pt.png" alt="">
+                <img src="image/sedan-1d.png" alt="">
+                <img src="image/suv-10hs.png" alt="">
             </div>
-        </div>
-        <div id="grid" class="grid-container">
-            <a class="grid-item" href="toyota-vios.html">
-                <img src="image/sedan-1b.png">
-                <h1>Toyota Vios</h1>
-                <h1>470.000.000 - 570.000.000 đ</h1>
-            </a>
-            <a class="grid-item" href="hyundai-accent.html">
-                <img src="image/sedan-2b.png">
-                <h1>Hyundai Accent</h1>
-                <h1>420.000.000 - 542.000.000 đ</h1>
-            </a>
-            <a class="grid-item" href="kio-soluto.html">
-                <img src="image/sedan-3b.png">
-                <h1>Kia Soluto</h1>
-                <h1>399.000.000 - 499.000.000 đ</h1>
-            </a>
-            <a class="grid-item" href="mistubishi-attrage.html">
-                <img src="image/sedan-4b.png">
-                <h1>Mitsubishi Attrage</h1>
-                <h1>375.000.000 - 460.000.000 đ</h1>
-            </a>
-            <a class="grid-item" href="mazda-2.html">
-                <img src="image/sedan-5b.png">
-                <h1>Mazda 2</h1>
-                <h1>509.000.000 - 649.000.000 đ</h1>
-            </a>
-            <a class="grid-item" href="honda-city.html">
-                <img src="image/sedan-6b.png">
-                <h1>Honda City</h1>
-                <h1>559.000.000 - 599.000.000 đ</h1>
-            </a>
-            <a class="grid-item" href="suzuki-ciaz.html">
-                <img src="image/sedan-7b.png">
-                <h1>Suzuki Ciaz</h1>
-                <h1>488.000.000 đ</h1>
-            </a>
-            <a class="grid-item" href="chevrolet-aveo.html">
-                <img src="image/sedan-8b.png">
-                <h1>Chevrolet Aveo</h1>
-                <h1>455.000.000 - 490.000.000 đ</h1>
-            </a>
-            <a class="grid-item" href="renault-logan.html">
-                <img src="image/sedan-9b.png">
-                <h1>Renault Logan</h1>
-                <h1>599.000.000 đ</h1>
-            </a>
-            <a class="grid-item" href="nissan-sunny.html">
-                <img src="image/sedan-10b.png">
-                <h1>Nissan Sunny</h1>
-                <h1>448.000.000 - 518.000.000 đ</h1>
-            </a>
-            <a class="grid-item" href="volkswagen-polo.html">
-                <img src="image/sedan-11b.png">
-                <h1>Volkswagen Polo</h1>
-                <h1>699.000.000 đ</h1>
-            </a>
-            <a class="grid-item" href="kia-rio.html">
-                <img src="image/sedan-12b.png">
-                <h1>Kia Rio</h1>
-                <h1>470.000.000 - 510.000.000 đ</h1>
-            </a>
-            <a class="grid-item" href="nissan-versa.html">
-                <img src="image/sedan-13b.png">
-                <h1>Nissan Versa</h1>
-                <h1>304.000.000 đ</h1>
-            </a>
+        </section>
+        <div class="menu">
+            <ul>
+                <li>Hatchback<i class="fas fa-angle-left"></i>
+                    <div class="submenu">
+                        <ul>
+                            <a href="hatch-back-a.html">
+                                <li>Phân Khúc A</li>
+                            </a>
+                            <a href="hatch-back-b.html">
+                                <li>Phân Khúc B</li>
+                            </a>
+                            <a href="hatch-back-c.html">
+                                <li>Phân Khúc C</li>
+                            </a>
+                            <a href="hatch-back-d.html">
+                                <li>Phân Khúc D</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+                <li>SUV<i class="fas fa-angle-left"></i>
+                    <div class="submenu">
+                        <ul>
+                            <a href="suv-b.html">
+                                <li>Phân khúc B</li>
+                            </a>
+                            <a href="suv-c.html">
+                                <li>Phân khúc C</li>
+                            </a>
+                            <a href="suv-pt.html">
+                                <li>Phổ thông</li>
+                            </a>
+                            <a href="suv-hs.html">
+                                <li>Hạng sang</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+                <li>Crossover<i class="fas fa-angle-left"></i>
+                    <div class="submenu">
+                        <ul>
+                            <a href="crossover-b.html">
+                                <li>Phân khúc B</li>
+                            </a>
+                            <a href="crossover-c.html">
+                                <li>Phân khúc C</li>
+                            </a>
+                            <a href="crossover-d.html">
+                                <li>Phân Khúc D</li>
+                            </a>
+                            <a href="crossover-n.html">
+                                <li>Cỡ Nhỏ</li>
+                            </a>
+                            <a href="crossover-pt.html">
+                                <li>Phổ Thông</li>
+                            </a>
+                            <a href="crossover-hs.html">
+                                <li>Hạng Sang</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+                <li>Sedan<i class="fas fa-angle-left"></i>
+                    <div class="submenu">
+                        <ul>
+                            <a href="sedan-a.html">
+                                <li>Phân Khúc A</li>
+                            </a>
+                            <a href="sedan-b.html">
+                                <li>Phân Khúc B</li>
+                            </a>
+                            <a href="sedan-c.html">
+                                <li>Phân Khúc C</li>
+                            </a>
+                            <a href="sedan-d.html">
+                                <li>Phân Khúc D</li>
+                            </a>
+                            <a href="sedan-hs.html">
+                                <li>Hạng Sang</li>
+                            </a>
+                            <a href="sedan-l.html">
+                                <li>Cỡ Lớn</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+                <li>Coupe<i class="fas fa-angle-left"></i>
+                    <div class="submenu">
+                        <ul>
+                            <a href="coupe-hs.html">
+                                <li>Hạng Sang</li>
+                            </a>
+                            <a href="coupe-hsl.html">
+                                <li>Hạng Sang Cỡ Lớn</li>
+                            </a>
+                            <a href="coupe-tt.html">
+                                <li>Thể Thao</li>
+                            </a>
+                            <a href="coupe-sx.html">
+                                <li>Siêu Xe</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+                <li>Convertible<i class="fas fa-angle-left"></i>
+                    <div class="submenu">
+                        <ul>
+                            <a href="convertible-c.html">
+                                <li>Phân Khúc C</li>
+                            </a>
+                            <a href="convertible-hs.html">
+                                <li>Hạng Sang</li>
+                            </a>
+                            <a href="convertible-hsl.html">
+                                <li>Hạng Sang Cỡ Lớn</li>
+                            </a>
+                            <a href="convertible-tt.html">
+                                <li>Thể Thao</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+                <li>Van<i class="fas fa-angle-left"></i>
+                    <div class="submenu">
+                        <ul>
+                            <a href="van-gd.html">
+                                <li>Gia Đình</li>
+                            </a>
+                            <a href="van-tm.html">
+                                <li>Thương Mại</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+                <li>Bán Tải<i class="fas fa-angle-left"></i>
+                    <div class="submenu">
+                        <ul>
+                            <a href="mini-van-l.html">
+                                <li>Cỡ Lớn</li>
+                            </a>
+                            <a href="mini-van-n.html">
+                                <li>Cỡ Nhỏ</li>
+                            </a>
+                            <a href="mini-van-pt.html">
+                                <li>Phổ Thông</li>
+                            </a>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
+    <div class="product-body">
+        <div class="brand">
+            <span style="font-size: 30px; background-color: rgb(192, 205, 216);">Hãng Xe</span>
+            <a class="icon" href="honda.html">
+                <img src="icon/honda.png">
+                <span>Honda</span>
+            </a>
+            <a class="icon" href="toyota.html">
+                <img src="icon/toyota.png">
+                <span>Toyota</span>
+            </a>
+            <a class="icon" ford.html>
+                <img src="icon/ford.png">
+                <span>Ford</span>
+            </a>
+            <a class="icon" href="hyundai.html">
+                <img src="icon/huyndai.png">
+                <span>Hyundai</span>
+            </a>
+            <a class="icon" href="mazda.html">
+                <img src="icon/mazda.png">
+                <span>Mazda</span>
+            </a>
+            <a class="icon" href="suzuki.html">
+                <img src="icon/suzuki.png">
+                <span>Suzuki</span>
+            </a>
+            <a class="icon" href="chevrolet.html">
+                <img src="icon/chevrolet.png">
+                <span>Chevrolet</span>
+            </a>
+            <a class="icon" href="infiniti.html">
+                <img src="icon/infiniti.png">
+                <span>Infiniti</span>
+            </a>
+            <a class="icon" href="isuzu.html">
+                <img src="icon/isuzu.png">
+                <span>Isuzu</span>
+            </a>
+            <a class="icon" href="lexus.html">
+                <img src="icon/lexus.png">
+                <span>Lexus</span>
+            </a>
+            <a class="icon" href="bmw.html">
+                <img src="icon/bmw.png">
+                <span>BMW</span>
+            </a>
+            <a class="icon" href="maserati.html">
+                <img src="icon/maserati.png">
+                <span>Maserati</span>
+            </a>
+            <a class="icon" href="mercedes-benz.html">
+                <img src="icon/mercedes-benz.png">
+                <span>Mercedes-Benz</span>
+            </a>
+            <a class="icon" href="mitsubishi.html">
+                <img src="icon/mitsubishi.png">
+                <span>Mitsubishi</span>
+            </a>
+            <a class="icon" href="Nissan.html">
+                <img src="icon/nissan.png">
+                <span>Nissan</span>
+            </a>
+            <a class="icon" href="peugeot.html">
+                <img src="icon/peugeot.png">
+                <span>Peugeot</span>
+            </a>
+            <a class="icon" href="porsche.html">
+                <img src="icon/porsche.png">
+                <span>Porsche</span>
+            </a>
+            <a class="icon" href="renault.html">
+                <img src="icon/renault.jpg">
+                <span>Renault</span>
+            </a>
+            <a class="icon" href="subaru.html">
+                <img src="icon/subaru.png">
+                <span>Subaru</span>
+            </a>
+            <a class="icon" href="volkswagen.html">
+                <img src="icon/.png">
+                <span>Volkswagen</span>
+            </a>
+            <a class="icon" href="volvo.html">
+                <img src="icon/volvo.png">
+                <span>Volvo</span>
+            </a>
+            <a class="icon" href="tesla.html">
+                <img src="icon/tesla.png">
+                <span>Tesla</span>
+            </a>
+            <a class="icon" href="cadillac.html">
+                <img src="icon/cadillac.png">
+                <span>Cadillac</span>
+            </a>
+            <a class="icon" href="land-rover.html">
+                <img src="icon/land-rover.png">
+                <span>Land Rover</span>
+            </a>
+            <a class="icon" href="Bentley.html">
+                <img src="icon/bentley.png">
+                <span>Bentley</span>
+            </a>
+            <a class="icon" href="aston-martin.html">
+                <img src="icon/aston-martin.png">
+                <span>Aston Martin</span>
+            </a>
+            <a class="icon" href="lamborgini.html">
+                <img src="icon/lamborghini.png">
+                <span>Lamborghini</span>
+            </a>
+            <a class="icon" href="rolls-royce.html">
+                <img src="icon/rolls-royce.png">
+                <span>Rolls-Royce</span>
+            </a>
+            <a class="icon" href="audi.html">
+                <img src="icon/audi.png">
+                <span>Audi</span>
+            </a>
+            <a class="icon" href="buick.html">
+                <img src="icon/buick.png">
+                <span>Buick</span>
+            </a>
+            <a class="icon" href="SsangYong.html">
+                <img src="icon/SsangYong.jpg">
+                <span>SsangYong</span>
+            </a>
+            <a class="icon" href="vinfast.html">
+                <img src="icon/vinfast.png">
+                <span>Vinfast</span>
+            </a>
+            <a class="icon" href="jauguar.html">
+                <img src="icon/jaguar.png">
+                <span>Jaguar</span>
+            </a>
+        </div>
+        <div class="grid-container">
+            <div class="grid-item" href="toyota-vios.html">
+                <a href="">
+                    <img src="image/sedan-1b.png">
+                </a>
+                <div>
+                    <h1>Toyota Vios</h1>
+                    <h1>470.000.000 - 570.000.000 đ</h1>
+                </div>
+            </div>
+            <div class="grid-item" href="hyundai-accent.html">
+                <a href="">
+                    <img src="image/sedan-2b.png">
+                </a>
+                <div>
+                    <h1>Hyundai Accent</h1>
+                    <h1>420.000.000 - 542.000.000 đ</h1>
+                </div>
+            </div>
+            <div class="grid-item" href="kio-soluto.html">
+                <a href="">
+                    <img src="image/sedan-3b.png">
+                </a>
+                <div>
+                    <h1>Kia Soluto</h1>
+                    <h1>399.000.000 - 499.000.000 đ</h1>
+                </div>
+            </div>
+            <div class="grid-item" href="mistubishi-attrage.html">
+                <a href="">
+                    <img src="image/sedan-4b.png">
+                </a>
+                <div>
+                    <h1>Mitsubishi Attrage</h1>
+                    <h1>375.000.000 - 460.000.000 đ</h1>
+                </div>
+            </div>
+            <div class="grid-item" href="mazda-2.html">
+                <a href="">
+                    <img src="image/sedan-5b.png">
+                </a>
+                <div>
+                    <h1>Mazda 2</h1>
+                    <h1>509.000.000 - 649.000.000 đ</h1>
+                </div>
+            </div>
+            <div class="grid-item" href="honda-city.html">
+                <a href="">
+                    <img src="image/sedan-6b.png">
+                </a>
+                <div>
+                    <h1>Honda City</h1>
+                    <h1>559.000.000 - 599.000.000 đ</h1>
+                </div>
+            </div>
+            <div class="grid-item" href="suzuki-ciaz.html">
+                <a href="">
+                    <img src="image/sedan-7b.png">
+                </a>
+                <div>
+                    <h1>Suzuki Ciaz</h1>
+                    <h1>488.000.000 đ</h1>
+                </div>
+            </div>
+            <div class="grid-item" href="chevrolet-aveo.html">
+                <a href="">
+                    <img src="image/sedan-8b.png">
+                </a>
+                <div>
+                    <h1>Chevrolet Aveo</h1>
+                    <h1>455.000.000 - 490.000.000 đ</h1>
+                </div>
+            </div>
+            <div class="grid-item" href="renault-logan.html">
+                <a href="">
+                    <img src="image/sedan-9b.png">
+                </a>
+                <div>
+                    <h1>Renault Logan</h1>
+                    <h1>599.000.000 đ</h1>
+                </div>
+            </div>
+            <div class="grid-item" href="nissan-sunny.html">
+                <a href="">
+                    <img src="image/sedan-10b.png">
+                </a>
+                <div>
+                    <h1>Nissan Sunny</h1>
+                    <h1>448.000.000 - 518.000.000 đ</h1>
+                </div>
+            </div>
+            <div class="grid-item" href="volkswagen-polo.html">
+                <a href="">
+                    <img src="image/sedan-11b.png">
+                </a>
+                <div> 
+                    <h1>Volkswagen Polo</h1>
+                    <h1>699.000.000 đ</h1>
+                </div>
+            </div>
+            <div class="grid-item" href="kia-rio.html">
+                <a href="">
+                    <img src="image/sedan-12b.png">
+                </a>
+                <div>
+                    <h1>Kia Rio</h1>
+                    <h1>470.000.000 - 510.000.000 đ</h1>    
+                </div>
+                
+            </div>
+            <div class="grid-item" href="nissan-versa.html">
+                <a href="">
+                    <img src="image/sedan-13b.png">
+                </a>
+                <div>
+                    <h1>Nissan Versa</h1>
+                    <h1>304.000.000 đ</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="description">
+        <div class="info-1">
+            <ul>
+                <li style="font-weight: bold; font-size: 20px;">Hỗ Trợ Khách Hàng</li>
+                <li>Liên Hệ</li>
+                <li>Câu Hỏi Thường Gặp</li>
+                <li>Dịch Vụ</li>
+                <li>Điều Khoản</li>
+                <li>Chính Sách</li>
+            </ul>
+            <ul>
+                <li style="font-weight: bold; font-size: 20px;">Về Chúng Tôi</li>
+                <li>Giới Thiệu</li>
+                <li>Tuyển Dụng</li>
+                <li>Quy Chế</li>
+                <li>Sitemap</li>
+            </ul>
+            <ul>
+                <li style="font-weight: bold; font-size: 20px;">Tin Tức</li>
+                <li>Báo Giá Dịch Vụ</li>
+                <li>Khuyến Mãi</li>
+                <li>Cải Tiến</li>
+            </ul>
+            <div class="social">
+                <ul>
+                    <li><img src="image/facebook.png" width="30px" alt=""></li>
+                    <li><img src="image/instagram.png" width="30px" alt=""></li>
+                    <li><img src="image/twitter.png" width="30px" alt=""></li>
+                </ul>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                </ul>
+            </div>
+        </div>
+        <div class="info-2">
+            <ul>
+                <li style="font-weight: bold; font-size: 20px;">CÔNG TY CỔ PHẦN TOÀN KHỈ VIỆT NAM</li>
+                <li>Copyright © 2015 - 2020 toankhi.com.vn</li>
+                <li><i class="fas fa-phone"></i> 0349.966.760 <i class="far fa-envelope"></i> toankhi@toankhi.com.vn
+                </li>
+                <li>Thời gian làm việc: 8:30 - 17:15 (thứ 2 - thứ 6)</li>
+                <li><img width="140px" src="image/bocongthuong.png"></li>
+            </ul>
+            <ul>
+                <li>Chịu trách nhiệm nội dung: ông Toàn Khỉ</li>
+                <li>Toàn bộ quy chế, quy định giao dịch chung được đăng tải trên website áp dụng từ ngày 1/10/2020.
+                    toankhi.com không bán xe trực tiếp, quý khách mua xe xin vui lòng liên hệ trực tiếp người đăng tin.
+                </li>
+            </ul>
+        </div>
+        <div class="info-3">
+            <ul>
+                <li>Địa chỉ trụ sở chính</li>
+                <li>766 Võ Văn Kiệt, Phường 1, Quận 5, Thành phố Hồ Chí Minh</li>
+            </ul>
+            <ul>
+                <li>Văn phòng TP. Hồ Chí Minh</li>
+                <li>Tầng 14, Toà nhà Vietcombank, số 5 Công Trường Mê Linh, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

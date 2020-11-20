@@ -1,117 +1,130 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Trang Chủ</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 </head>
+
 <body>
     <style type="text/css">
         @import "css/1.css";
+        @import "css/4.css";
+
         @keyframes sale {
             0% {
                 color: rgb(252, 19, 3);
             }
+
             50% {
-                color: rgb(173, 43, 82);
+                color: rgb(219, 114, 114);
             }
+
             100% {
-                color: rgb(240, 12, 240);
+                color: rgb(216, 158, 167);
             }
         }
-        .sale {
-            height: 50px;
+
+        .shop-body, .shop-body-2 {
+            margin: 80px auto;
+            width: 175vh;
+            height: auto;
+            display: block;
+            background-color: aqua;
         }
-        .grid-container {
-            margin: 15px auto;
-            display: grid;
-            grid-template-columns: repeat(4, 250px);
-            grid-template-rows: repeat(2, 270px);
-            grid-gap: 10px;
-            justify-content: center;
-        }
-        .grid-container-2 {
-            margin: 15px auto;
-            position: relative;
-            top: 30px;
-            display: grid;
-            grid-template-columns: repeat(4, 250px);
-            grid-template-rows: repeat(2, 270px);
-            grid-gap: 10px;
-            justify-content: center;
-        }
-        .shop-body h1 {
+
+        .shop-body h1, h2, span {
             font-size: 20px;
             font-weight: 100;
         }
-        .shop-body {
-            margin-top: 100px;
-            width: 143vh;
-            height: 180vh;
-            position: relative;
-            transform: translateX(-50%);
-            left: 50%;
+
+        .shop-body-2 h1, h2, span {
+            font-size: 20px;
+            font-weight: 100;
         }
-        .flash-sale {
+
+        .shop-body .flash-sale {
+            width: 100%;
+            height: 30px;
             display: flex;
-            justify-content: flex-start;
             align-items: center;
         }
-        .flash-sale ul {
-            list-style: none;
-            margin-left: 20px;
-            justify-content: space-between;
+
+        .shop-body .flash-sale ul {
+            margin-left: 25px;
             display: flex;
         }
-        .flash-sale ul li {
+
+        .shop-body .flash-sale ul li {
             padding: 5px;
             margin: 0 5px;
             background-color: red;
         }
-        .flash-sale h2 {
-            font-weight: 100;
+
+        .shop-body .flash-sale h2 {
             font-size: 30px;
             animation: sale 0.1s linear infinite;
         }
-        .upper-half span {
-            background: linear-gradient(45deg, rgb(224, 79, 43), rgb(227, 202, 43));
-            color: white;
-            border-radius: 0 0 40px 40px;
+
+        .grid-container {
+            grid-gap: none;
+            justify-content: center;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: repeat(2, 270px);
+        }
+
+        .famous {
+            width: 100%;
+            height: 30px;
+        }
+
+        .upper-half .sale{
             text-align: center;
-            display: block;
-            height: 35px;
-            width: 45px;
-            position: relative;
+            width: 80px;
+            height: 40px;
+            position: absolute;
             top: 0;
             left: 0;
         }
-        .grid-container .lower-half h1:nth-child(2) {
+
+        .shop-body .grid-container .lower-half h1:nth-child(2) {
             text-decoration: line-through;
+        }
+
+        @media (max-width: 1080px) {
+            .shop-body, .shop-body-2 {
+                width: 600px;
+                height: auto;
+            }
+            .grid-container {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(5,290px);
+            }
         }
     </style>
     <div class="utility">
-        <a href="#">Tải Ứng Dụng</a>
-        <a href="#">Chăm Sóc Khách Hàng</a>
-        <a href="#">Thông Báo</a>
-        <a href="#">Kết Nối</a>
-        <div class="login">
-            <a href="login.html">Đăng Nhập</a>
-            <i class="fas fa-sign-in-alt"></i>
-        </div>
+        <a href="#"><span>Tải Ứng Dụng</span></a>
+        <a href="#"><span>Thông Báo</span></a>
+        <a href="#"><span>Kết Nối</span></a>
+        <a href="login.html" class="login">
+            <span>Đăng Nhập</span>
+            <span><i class="fas fa-user"></i></span>
+        </a>
     </div>
     <div class="search-body">
         <a href="home.html"><img src="image/logo.png"></a>
-        <div class="search-box">
+        <form class="search-box">
             <input id="search" type="text" placeholder="Tìm Kiếm" class="search-bar">
             <i class="fas fa-search"></i>
-        </div>
+        </form>
         <a href="cart.html" id="cart-info" class="cart-info">
             <span class="cart-info-icon"><i class="fas fa-shopping-cart"></i></span>
             <div class="productNumber"><small>0</small></div>
         </a>
     </div>
-    <header class="shop-banner">
+    <div class="shop-banner">
         <section class="image-container">
             <div class="button-slider">
                 <button id="previous"><i class="fas fa-arrow-left"></i></button>
@@ -280,20 +293,20 @@
                 </li>
             </ul>
         </div>
-    </header>
+    </div>
     <div class="shop-body">
         <div class="flash-sale">
-            <img src="image/sale.png" class="sale">
+            <h2>Giảm Giá</h2>
             <ul>
                 <li id="h"></li>
                 <li id="m"></li>
                 <li id="s"></li>
             </ul>
         </div>
-        <div class="grid-container" id="list">
+        <div class="grid-container">
             <div class="grid-item">
                 <a class="upper-half" href="renault-sandero.html">
-                    <span>-50%</span>
+                    <img class="sale" src="image/sale.png">
                     <img src="image/hatch-back-1b.png">
                 </a>
                 <div class="lower-half">
@@ -301,11 +314,12 @@
                     <h1>669.000.000 đ</h1>
                     <h1>335.000.000 đ</h1>
                 </div>
+                
                 <span class="add-cart cart-1">Thêm vào giỏ</span>
             </div>
             <div class="grid-item">
                 <a class="upper-half" href="ford-fiesta.html">
-                    <span>-50%</span>
+                    <img class="sale" src="image/sale.png">
                     <img src="image/hatch-back-2b.png">
                 </a>
                 <div class="lower-half">
@@ -315,9 +329,9 @@
                 </div>
                 <span class="add-cart cart-2">Thêm vào giỏ</span>
             </div>
-            <div class="grid-item" href="bmw-218i.png">
-                <a class="upper-half">
-                    <span>-50%</span>
+            <div class="grid-item">
+                <a class="upper-half" href="bmw-218i.html">
+                    <img class="sale" src="image/sale.png">
                     <img src="image/hatch-back-2c.png">
                 </a>
                 <div class="lower-half">
@@ -327,9 +341,9 @@
                 </div>
                 <span class="add-cart cart-3">Thêm vào giỏ</span>
             </div>
-            <div class="grid-item" href="volkswagen-beetle.html">
-                <a class="upper-half">
-                    <span>-50%</span>
+            <div class="grid-item">
+                <a class="upper-half" href="volkswagen-beetle.html">
+                    <img class="sale" src="image/sale.png">
                     <img src="image/hatch-back-4c.png">
                 </a>
                 <div class="lower-half">
@@ -339,9 +353,9 @@
                 </div>
                 <span class="add-cart cart-4">Thêm vào giỏ</span>
             </div>
-            <div class="grid-item" href="toyota-prius.html">
-                <a class="upper-half">
-                    <span>-50%</span>
+            <div class="grid-item">
+                <a class="upper-half" href="toyota-prius.html">
+                    <img class="sale" src="image/sale.png">
                     <img src="image/hatch-back-6c.png">
                 </a>
                 <div class="lower-half">
@@ -351,9 +365,9 @@
                 </div>
                 <span class="add-cart cart-5">Thêm vào giỏ</span>
             </div>
-            <div class="grid-item" href="chevrolet-volt.html">
-                <a class="upper-half">
-                    <span>-50%</span>
+            <div class="grid-item">
+                <a class="upper-half" href="chevrolet-volt.html">
+                    <img class="sale" src="image/sale.png">
                     <img src="image/hatch-back-7c.png">
                 </a>
                 <div class="lower-half">
@@ -363,9 +377,9 @@
                 </div>
                 <span class="add-cart cart-6">Thêm vào giỏ</span>
             </div>
-            <div class="grid-item" href="suzuki-vitara.html">
-                <a class="upper-half">
-                    <span>-50%</span>
+            <div class="grid-item">
+                <a class="upper-half" href="suzuki-vitara.html">
+                    <img class="sale" src="image/sale.png">
                     <img src="image/suv-3b.png">
                 </a>
                 <div class="lower-half">
@@ -375,9 +389,9 @@
                 </div>
                 <span class="add-cart cart-7">Thêm vào giỏ</span>
             </div>
-            <div class="grid-item" href="renault-duster.html">
-                <a class="upper-half">
-                    <span>-50%</span>
+            <div class="grid-item">
+                <a class="upper-half" href="renault-duster.html">
+                    <img class="sale" src="image/sale.png">
                     <img src="image/suv-4b.png">
                 </a>
                 <div class="lower-half">
@@ -387,11 +401,39 @@
                 </div>
                 <span class="add-cart cart-8">Thêm vào giỏ</span>
             </div>
+            <div class="grid-item">
+                <a class="upper-half" href="mercedes-benz-a250.html">
+                    <img class="sale" src="image/sale.png">
+                    <img src="image/hatch-back-2d.png">
+                </a>
+                <div class="lower-half">
+                    <h1>Mercedes-Benz A250</h1>
+                    <h1>1.699.000.000 đ</h1>
+                    <h1>850.000.000 đ</h1>
+                </div>
+                <span class="add-cart cart-5">Thêm vào giỏ</span>
+            </div>
+            <div class="grid-item">
+                <a class="upper-half" href="volvo-v40.html">
+                    <img class="sale" src="image/sale.png">
+                    <img src="image/hatch-back-3d.png">
+                </a>
+                <div class="lower-half">
+                    <h1>Volvo V40</h1>
+                    <h1>900.000.000 đ</h1>
+                    <h1>450.000.000 đ</h1>
+                </div>
+                <span class="add-cart cart-5">Thêm vào giỏ</span>
+            </div>
         </div>
-        <h2 class="h2">Các xe đang nổi</h2>
-        <div class="grid-container-2">
-            <div class="grid-item" href="volvo-xc40.html">
-                <a class="upper-half">
+    </div>
+    <div class="shop-body-2">
+        <div class="famous">
+            <h1 style="font-size: 30px;">Các Xe Nổi</h1>
+        </div>
+        <div class="grid-container">
+            <div class="grid-item">
+                <a class="upper-half" href="volvo-xc40.html">
                     <img src="image/suv-5c.png">
                 </a>
                 <div class="lower-half">
@@ -400,8 +442,8 @@
                 </div>
                 <span class="add-cart cart-9">Thêm vào giỏ</span>
             </div>
-            <div class="grid-item" href="toyota-rav4.html">
-                <a class="upper-half">
+            <div class="grid-item">
+                <a class="upper-half" href="toyota-rav4.html">
                     <img src="image/suv-6c.png">
                 </a>
                 <div class="lower-half">
@@ -410,8 +452,8 @@
                 </div>
                 <span class="add-cart cart-10">Thêm vào giỏ</span>
             </div>
-            <div class="grid-item" href="land-rover-discovery.html">
-                <a class="upper-half">
+            <div class="grid-item">
+                <a class="upper-half" href="land-rover-discovery.html">
                     <img src="image/suv-3hs.png">
                 </a>
                 <div class="lower-half">
@@ -420,8 +462,8 @@
                 </div>
                 <span class="add-cart cart-11">Thêm vào giỏ</span>
             </div>
-            <div class="grid-item" href="lamborghini-urus.html">
-                <a class="upper-half">
+            <div class="grid-item">
+                <a class="upper-half" href="lamborghini-urus.html">
                     <img src="image/suv-4hs.png">
                 </a>
                 <div class="lower-half">
@@ -430,8 +472,8 @@
                 </div>
                 <span class="add-cart cart-12">Thêm vào giỏ</span>
             </div>
-            <div class="grid-item" href="mercedes-benz-gls-350d.html">
-                <a class="upper-half">
+            <div class="grid-item">
+                <a class="upper-half" href="mercedes-benz-gls-350d.html">
                     <img src="image/suv-8hs.png">
                 </a>
                 <div class="lower-half">
@@ -440,8 +482,8 @@
                 </div>
                 <span class="add-cart cart-13">Thêm vào giỏ</span>
             </div>
-            <div class="grid-item" href="">
-                <a class="upper-half">
+            <div class="grid-item">
+                <a class="upper-half" href="bmw-x5.html">
                     <img src="image/suv-13hs.png">
                 </a>
                 <div class="lower-half">
@@ -450,8 +492,8 @@
                 </div>
                 <span class="add-cart cart-14">Thêm vào giỏ</span>
             </div>
-            <div class="grid-item" href="">
-                <a class="upper-half">
+            <div class="grid-item">
+                <a class="upper-half" href="mercedes-amg-gle-43.html">
                     <img src="image/suv-15hs.png">
                 </a>
                 <div class="lower-half">
@@ -460,13 +502,33 @@
                 </div>
                 <span class="add-cart cart-15">Thêm vào giỏ</span>
             </div>
-            <div class="grid-item" href="">
-                <a class="upper-half">
+            <div class="grid-item">
+                <a class="upper-half" href="mercedes-benz-gle-450.html">
                     <img src="image/suv-16hs.png">
                 </a>
                 <div class="lower-half">
                     <h1>Mercedes-Benz GLE 450</h1>
                     <h1>4.369.000.000 đ</h1>
+                </div>
+                <span class="add-cart cart-16">Thêm vào giỏ</span>
+            </div>
+            <div class="grid-item">
+                <a class="upper-half" href="lexus-ct-200h.html">
+                    <img src="image/hatch-back-4d.png">
+                </a>
+                <div class="lower-half">
+                    <h1>Lexus CT 200h</h1>
+                    <h1>808.000.000 đ</h1>
+                </div>
+                <span class="add-cart cart-16">Thêm vào giỏ</span>
+            </div>
+            <div class="grid-item">
+                <a class="upper-half" href="hyundai-ioniq.html">
+                    <img src="image/hatch-back-6d.png">
+                </a>
+                <div class="lower-half">
+                    <h1>Hyundai Ioniq</h1>
+                    <h1>572.000.000 đ</h1>
                 </div>
                 <span class="add-cart cart-16">Thêm vào giỏ</span>
             </div>
@@ -512,13 +574,16 @@
             <ul>
                 <li style="font-weight: bold; font-size: 20px;">CÔNG TY CỔ PHẦN TOÀN KHỈ VIỆT NAM</li>
                 <li>Copyright © 2015 - 2020 toankhi.com.vn</li>
-                <li><i class="fas fa-phone"></i> 0349.966.760 <i class="far fa-envelope"></i> toankhi@toankhi.com.vn</li>
+                <li><i class="fas fa-phone"></i> 0349.966.760 <i class="far fa-envelope"></i> toankhi@toankhi.com.vn
+                </li>
                 <li>Thời gian làm việc: 8:30 - 17:15 (thứ 2 - thứ 6)</li>
                 <li><img width="140px" src="image/bocongthuong.png"></li>
             </ul>
             <ul>
                 <li>Chịu trách nhiệm nội dung: ông Toàn Khỉ</li>
-                <li>Toàn bộ quy chế, quy định giao dịch chung được đăng tải trên website áp dụng từ ngày 1/10/2020. toankhi.com không bán xe trực tiếp, quý khách mua xe xin vui lòng liên hệ trực tiếp người đăng tin.</li>
+                <li>Toàn bộ quy chế, quy định giao dịch chung được đăng tải trên website áp dụng từ ngày 1/10/2020.
+                    toankhi.com không bán xe trực tiếp, quý khách mua xe xin vui lòng liên hệ trực tiếp người đăng tin.
+                </li>
             </ul>
         </div>
         <div class="info-3">
@@ -528,10 +593,12 @@
             </ul>
             <ul>
                 <li>Văn phòng TP. Hồ Chí Minh</li>
-                <li>Tầng 14, Toà nhà Vietcombank, số 5 Công Trường Mê Linh, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh</li>
+                <li>Tầng 14, Toà nhà Vietcombank, số 5 Công Trường Mê Linh, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh
+                </li>
             </ul>
         </div>
     </div>
     <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>
