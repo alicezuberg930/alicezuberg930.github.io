@@ -1,4 +1,4 @@
-@media (max-width: 1080px) {
+@media (max-width: 800px) {
     .search-box {
         width: 450px;
         height: 40px;
@@ -51,14 +51,19 @@
         position: absolute;
         width: 100%;
         top: 100%;
+        bottom: 0;
         left: 0;
+    }
+    .submenu ul{
+        display: flex;
+        justify-content: flex-start;
     }
     .submenu ul li {
         justify-content: center;
         align-items: center;
         display: flex;
         width: 100%;
-        height: 6vh;
+        height: 100%;
         color: black;
     }
     .fa-angle-left {

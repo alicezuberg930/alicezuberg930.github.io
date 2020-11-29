@@ -1,31 +1,29 @@
-let cartcost = localStorage.getItem('TotalPrice');
+let cartcost = parseInt(localStorage.getItem('TotalPrice'));
 let cartitem = JSON.parse(localStorage.getItem('items'));
-let productContainer = document.querySelector('.products');
+let productContainer = document.querySelector('.product-container table');
+let total = document.querySelector(".total");
+let empty = document.querySelector(".empty");
 function display() {
   if (cartitem && cartcost) {
     cartitem.map(item => {
       productContainer.innerHTML += `
-        <div class="product">
-          <ul>
-            <li>${item.id}</li>
-            <li><img src="${item.tag}"></li>
-            <li><span>${item.name}</span></li>
-            <li><span>${item.price} VND</span></li>
-            <li><span> ${item.incart} </span></li>
-            <li><span>${item.price * item.incart} VND</span></li>
-            <li><i class="fas fa-trash" onclick="xoa(this)"></i></li>
-          </ul>  
-        </div>`;
+      <tr>
+        <td style="display: none;">${item.id}</td>
+        <td><img src="${item.tag}"></td>
+        <td>${item.name}</td>
+        <td>${item.price} VND</td>
+        <td>${item.incart}</td>
+        <td><i class="fas fa-trash" onclick="xoa(this)"></i></td>
+      </tr>`;
     });
-    productContainer.innerHTML += `
-      <div class="total-container">
-        <h1>Total Cost</h1>
-        <h1>${cartcost} VND</h1>
-      </div>`;
+    total.innerHTML += `
+      <h1>Tổng Giá Tiền</h1>
+      <h1>${cartcost} VND</h1>
+      `;
   }
-  else {
-    productContainer.innerHTML += `
-      <h1>No items found</h1>`;
+  else if (cartitem == null || cartcost == 0) {
+    empty.innerHTML += `
+      <h2>Giỏ của bạn hiện đang trống</h2>`;
   }
 }
 display();

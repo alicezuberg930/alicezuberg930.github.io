@@ -12,12 +12,11 @@
     <style type="text/css">
         @import "css/1.css";
         @import "css/4.css";
-
         .grid-container {
             grid-template-columns: repeat(3, 260px);
             grid-template-rows: repeat(6, 270px);
         }
-
+        
         @media (max-width: 1080px) {
             .grid-container {
                 grid-template-columns: 1fr 1fr;
@@ -42,7 +41,7 @@
         </form>
         <a href="cart.html" id="cart-info" class="cart-info">
             <span class="cart-info-icon"><i class="fas fa-shopping-cart"></i></span>
-            <div class="productNumber"><small>0</small></div>
+            <div class="cartItems"><small>0</small></div>
         </a>
     </div>
     <div class="shop-banner">
@@ -51,17 +50,7 @@
                 <button id="previous"><i class="fas fa-arrow-left"></i></button>
                 <button id="next"><i class="fas fa-arrow-right"></i></button>
             </div>
-            <div class="imageBox">
-                <img src="image/suv-18pt.png" alt="" class="active">
-                <img src="image/hatch-back-2b.png" alt="">
-                <img src="image/hatch-back-2c.png" alt="">
-                <img src="image/hatch-back-6c.png" alt="">
-                <img src="image/sedan-11d.png" alt="">
-                <img src="image/sedan-3d.png" alt="">
-                <img src="image/suv-10pt.png" alt="">
-                <img src="image/sedan-1d.png" alt="">
-                <img src="image/suv-10hs.png" alt="">
-            </div>
+            <div class="imageBox"></div>
         </section>
         <div class="menu">
             <ul>
@@ -561,8 +550,7 @@
             </ul>
             <ul>
                 <li>Chịu trách nhiệm nội dung: ông Toàn Khỉ</li>
-                <li>Toàn bộ quy chế, quy định giao dịch chung được đăng tải trên website áp dụng từ ngày 1/10/2020.
-                    toankhi.com không bán xe trực tiếp, quý khách mua xe xin vui lòng liên hệ trực tiếp người đăng tin.
+                <li>Toàn bộ quy chế, quy định giao dịch chung được đăng tải trên website áp dụng từ ngày 1/10/2020. toankhi.com không bán xe trực tiếp, quý khách mua xe xin vui lòng liên hệ trực tiếp người đăng tin.
                 </li>
             </ul>
         </div>
@@ -578,7 +566,8 @@
             </ul>
         </div>
     </div>
-    <script type="text/javascript" src="get-cart-items.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/get-cart-items.js"></script>
 </body>
 
 </html>

@@ -15,6 +15,7 @@ for (let i = 0; i < addcart.length; i++) {
                 price: fullprice,
                 incart: 1
             };
+            console.log(imagePath);
             if (JSON.parse(localStorage.getItem('items')) === null) {
                 items.push(item);
                 localStorage.setItem("items", JSON.stringify(items));
